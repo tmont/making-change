@@ -1,0 +1,11 @@
+{
+	"name": "make-change",
+	"version": "0.0.1",
+	"scripts": {
+		"test": "node_modules/.bin/mocha -R spec --recursive tests"
+	},
+	"devDependencies": {
+		"should": "*",
+		"mocha": "*"
+	}
+}
