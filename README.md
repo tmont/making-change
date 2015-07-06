@@ -30,10 +30,6 @@ console.log(makeChange(coins, changeToMake));
 */
 ```
 
-NOTE: the `coins` given to the function MUST be sorted!
-Obviously, it would be trivial to handle that within the function,
-but meh.
-
 If change cannot be made with the given coin denominations,
 it will return `null`.
 

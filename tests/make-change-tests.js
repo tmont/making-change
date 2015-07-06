@@ -27,6 +27,23 @@ describe('Makin\' dat change', function() {
 		verifyResult(result, change);
 	});
 
+	it('should still work if coins are not sorted', function() {
+		var coins = [ 5, 1, 25, 10 ].reverse(),
+			change = 91;
+
+		var result = makeChange(coins, change);
+		should.exist(result);
+
+		result.should.eql([
+			{ coinValue: 25, numCoins: 3 },
+			{ coinValue: 10, numCoins: 1 },
+			{ coinValue: 5, numCoins: 1 },
+			{ coinValue: 1, numCoins: 1 }
+		]);
+
+		verifyResult(result, change);
+	});
+
 	it('should find favor solution with least number of coins', function() {
 		var coins = [ 1, 8, 10 ].reverse(),
 			change = 24;
